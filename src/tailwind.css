@@ -19,6 +19,12 @@
 .btn-gray:hover {
   @apply bg-gray-light-imdb;
 }
+.btn-nav {
+  @apply bg-black text-white py-2 px-2;
+}
+.btn-nav:hover {
+  @apply bg-gray-light-imdb text-white;
+}
 .text-xxs {
   font-size: 0.5rem;
 }

@@ -32372,6 +32372,24 @@ video {
   background-color: rgba(49, 49, 49, var(--tw-bg-opacity));
 }
 
+.btn-nav {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.btn-nav:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(49, 49, 49, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
 .text-xxs {
   font-size: 0.5rem;
 }
