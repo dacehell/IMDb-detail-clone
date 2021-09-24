@@ -32412,6 +32412,10 @@ video {
   color: #388cef;
 }
 
+.img-poster {
+  height: 19.688rem;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
