@@ -32390,6 +32390,20 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
+.btn-gray-ligth {
+  --tw-bg-opacity: 1;
+  background-color: rgba(49, 49, 49, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.btn-gray-ligth:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
 .text-xxs {
   font-size: 0.5rem;
 }
