@@ -13,12 +13,16 @@
   </head>
   <body class="font-roboto bg-gray-imdb">
     <nav class="bg-black">
-      <div class="sm:container sm:mx-auto py-2">
-        <div class="flex">
-          <div>
+      <div class="sm:mx-auto py-2 px-16">
+        <div class="flex justify-around">
+          <div class="flex items-center">
+            <span class="block lg:hidden mr-3">
+              <i class="fas fa-bars mr-1 fa-lg text-white"></i>
+            </span>
+
             <svg
               id="home_img"
-              class="ipc-logo"
+              class="ipc-logo mr-3"
               xmlns="http://www.w3.org/2000/svg"
               width="60"
               height="28"
@@ -53,11 +57,23 @@
             </svg>
           </div>
 
-          <button class="flex-auto btn-nav text-sm btn mx-2">
-            <i class="fas fa-bars mr-1"></i>Menu
+          <button
+            class="
+              lg:flex
+              items-center
+              btn-nav
+              text-sm
+              btn
+              mx-2
+              hidden
+              lg:block
+            "
+          >
+            <i class="fas fa-bars mr-1 fa-lg"></i>
+            <p>Menu</p>
           </button>
 
-          <div class="w-3/6">
+          <div class="w-3/6 flex justify-end">
             <input
               type="text"
               class="
@@ -70,25 +86,49 @@
                 bg-contain
                 bg-center
                 bg-right
+                bg-size
               "
               placeholder="Search IMDb"
             />
           </div>
 
-          <a href="#" class="flex-auto text-center btn-nav text-sm btn ml-2"
+          <a
+            href="#"
+            class="
+              flex-auto
+              text-center
+              btn-nav
+              text-sm
+              btn
+              ml-2
+              hidden
+              lg:block
+            "
             >IMDbPRo</a
           >
-          <a href="#" class="flex-auto text-center btn-nav text-sm btn"
+          <a
+            href="#"
+            class="flex-auto text-center btn-nav text-sm btn hidden lg:block"
             ><span><i class="fas fa-bookmark mr-1"></i></span>Watchlist</a
           >
 
-          <a href="#" class="flex-auto text-center btn-nav text-sm btn"
+          <a
+            href="#"
+            class="
+              md:flex-auto
+              text-center
+              btn-nav
+              text-sm
+              btn
+              flex
+              lg:justify-center
+            "
             >Sign In</a
           >
         </div>
       </div>
     </nav>
-    <header class="px-16 grid grid-cols-2">
+    <header class="px-16 grid md:grid-cols-2 grid-cols-1">
       <div>
         <h1 class="text-3xl text-white mb-2 mt-6">
           Harry Potter and the Sorcerer's Stone
@@ -105,7 +145,7 @@
           </li>
         </ul>
       </div>
-      <div class="flex justify-end items-center">
+      <div class="md:flex justify-end md:items-center hidden">
         <div class="grid">
           <label class="text-white text-xs align-middle text-center" for=""
             >IMDb RATING</label
@@ -159,16 +199,16 @@
           rounded
         "
       >
-        <li class="mr-4">
+        <li class="mr-4 hidden md:block">
           <a href="">Cast & crew</a>
         </li>
-        <li class="list-disc ml-2 mr-4">
+        <li class="list-disc ml-2 mr-4 hidden md:block">
           <a href="">User reviews</a>
         </li>
-        <li class="list-disc ml-2 mr-4">
+        <li class="list-disc ml-2 mr-4 hidden md:block">
           <a href="">Trivia</a>
         </li>
-        <li class="list-disc ml-2">
+        <li class="list-disc ml-2 hidden md:block">
           <a href="">IMDbPro</a>
         </li>
         <div class="flex">
@@ -176,7 +216,7 @@
             <div class="mr-1">
               <img src="assets/search-topics.svg" alt="" />
             </div>
-            All topics
+            <span class="hidden md:block"> All topics </span>
           </button>
           <button
             class="
@@ -196,15 +236,36 @@
       </ul>
     </section>
     <section>
-      <div class="grid grid-cols-5 grid-rows-1 px-16">
-        <div class="col-span-1 row-span-2">
+      <div class="grid md:grid-cols-5 md:grid-rows-1 grid-cols-3 px-16 gap-1">
+        <div class="md:col-span-1 md:row-span-2 col-span-1 relative">
+          <div>
+            <i
+              class="
+                fas
+                fa-bookmark
+                text-gray-800
+                fa-3x
+                opacity-90
+                absolute
+                left-0
+                top-0
+                hover:text-gray-700
+              "
+            ></i>
+            <img
+              class="absolute left-1.5 top-2"
+              src="assets/ribbon-icon.svg"
+              alt=""
+            />
+          </div>
+
           <img
             class="h-80"
             src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_FMjpg_UX1000_.jpg"
             alt=""
           />
         </div>
-        <div class="col-span-3">
+        <div class="md:col-span-3 col-span-2">
           <iframe
             class="w-full h-80"
             src="https://www.youtube.com/embed/mNgwNXKBEW0"
@@ -214,31 +275,256 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="col-span-1 grid grid-rows-2">
+        <div
+          class="
+            md:col-span-1
+            grid
+            md:grid-rows-2
+            col-span-3
+            gap-1
+            grid-flow-col
+          "
+        >
           <div
             class="
-              col-span-1
+              md:col-span-1
               text-center text-white
               bg-gray-light-imdb
               w-full
               h-full
+              flex
+              md:flex-col
+              items-center
+              justify-center
+              rounded
+              text-xs
+              py-2
             "
           >
-            10 videos
+            <img class="md:mb-2 mr-2" src="assets/icon-videos.svg" alt="" />
+            <p class="items-center">10 VIDEOS</p>
           </div>
           <div
             class="
-              col-span-1
+              md:col-span-1
               text-center text-white
               bg-gray-light-imdb
               w-full
               h-full
+              flex
+              md:flex-col
+              items-center
+              justify-center
+              rounded
+              text-xs
             "
           >
-            99+ photos
+            <img class="md:mb-2 mr-2" src="assets/icon-photos.svg" alt="" />
+            <p>99+ PHOTOS</p>
           </div>
         </div>
       </div>
     </section>
+    <section class="mt-4 text-white px-16">
+      <div class="grid md:grid-cols-5">
+        <div class="col-span-3">
+          <div class="pb-3">
+            <button
+              class="
+                px-3
+                py-1
+                mr-2
+                rounded-full
+                bg-gray-imdb
+                hover:bg-gray-light-imdb
+                ring-white ring-1
+                text-xs
+              "
+            >
+              Adventure
+            </button>
+            <button
+              class="
+                px-3
+                py-1
+                rounded-full
+                bg-gray-imdb
+                hover:bg-gray-light-imdb
+                ring-white ring-1
+                mr-2
+                text-xs
+              "
+            >
+              Family
+            </button>
+            <button
+              class="
+                px-3
+                py-1
+                rounded-full
+                bg-gray-imdb
+                hover:bg-gray-light-imdb
+                ring-white ring-1
+                text-xs
+              "
+            >
+              Fantasy
+            </button>
+          </div>
+          <p class="py-1">
+            An orphaned boy enrolls in a school of wizardry, where he learns the
+            truth about himself, his family and the terrible evil that haunts
+            the magical world.
+          </p>
+          <div class="flex justify-start items-center block md:hidden mb-3">
+            <div class="grid">
+              <button class="btn btn-gray grid grid-cols-2 pr-2 pt-2">
+                <div>
+                  <i class="fas fa-star fa-lg fa-fw text-yellow-400"></i>
+                </div>
+                <div>
+                  <div class="grid grid-cols-2">
+                    <div class="text-sm">7.6</div>
+                    <div class="text-xs font-light">/10</div>
+                    <div class="text-xxs col-span-2 font-light text-left">
+                      699k
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+            <div class="grid ml-3">
+              <button class="btn btn-gray py-2 px-3 text-blue-imdb">
+                <i class="far fa-star mr-2 fa-lg"></i>Rate
+              </button>
+            </div>
+            <div class="grid ml-3">
+              <button class="btn btn-gray grid grid-cols-2 py-2 pr-2">
+                <div class="flex justify-center">
+                  <img src="assets/chart.svg" alt="" />
+                </div>
+                <div class="text-sm">
+                  79
+                  <span class="text-xs font-light ml-1"
+                    ><i class="fas fa-caret-down fa-xs mr-1"></i>24</span
+                  >
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="block md:hidden text-md">
+            <p><i class="fas fa-angle-down mr-2 mb-4"></i>Top credits</p>
+          </div>
+
+          <div class="divide-y divide-gray-700 hidden md:block">
+            <p class="py-1">
+              <span class="font-bold">Director</span>
+              <span class="text-blue-imdb"
+                ><a
+                  href="https://es.wikipedia.org/wiki/Chris_Columbus"
+                  target="_blank"
+                >
+                  Chris Columbus</a
+                >
+              </span>
+            </p>
+            <p class="py-1">
+              <span class="font-bold">Writters</span>
+              <span class="text-blue-imdb mr-2 ml-2"
+                ><a
+                  href="https://es.wikipedia.org/wiki/J._K._Rowling"
+                  target="_blank"
+                  >J.K. Rowling</a
+                ></span
+              >(novel) ·
+              <span class="text-blue-imdb"
+                ><a
+                  href="https://es.wikipedia.org/wiki/Steve_Kloves"
+                  target="_blank"
+                  >Steve Kloves</a
+                ></span
+              >
+              (screenplay)
+            </p>
+            <p class="py-1">
+              <span class="font-bold mr-2">Stars</span>
+              <span class="text-blue-imdb mr-2"
+                ><a
+                  href="https://es.wikipedia.org/wiki/Daniel_Radcliffe"
+                  target="_blank"
+                  >Daniel Radcliffe</a
+                ></span
+              >
+              ·<span class="text-blue-imdb mr-2 ml-2"
+                ><a
+                  href="https://es.wikipedia.org/wiki/Rupert_Grint"
+                  target="_blank"
+                  >Rupert Grint</a
+                ></span
+              >
+              ·<span class="text-blue-imdb ml-2"
+                ><a
+                  href="https://es.wikipedia.org/wiki/Richard_Harris"
+                  target="_blank"
+                  >Richard Harris</a
+                ></span
+              >
+            </p>
+            <div class="flex mb-3">
+              <img src="assets/icon-imdb-pro.svg" alt="" /><a
+                class="ml-2"
+                href="https://pro.imdb.com/title/tt0241527/?rf=cons_tt_atf&ref_=cons_tt_atf"
+                target="_blank"
+                >See production, box office & company info</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-2 md:ml-5">
+          <div class="grid grid-cols-1 grid-rows-2">
+            <div class="row-span-1 flex md:justify-end justify-start">
+              <button
+                class="btn-gray-ligth py-2 w-60 rounded-l-md flex justify-start"
+                onclick="window.location.href='https://www.imdb.com/registration/signin?u=%2Ftaskcompletion%2Fredeem%3Ftasktoken%3DeyJ0b2tlbklkZW50aWZpZXIiOiIxMzctODQxMjY3NS04ODgxNTI2IiwidG9rZW5JZGVudGlmaWVyVHlwZSI6IlNFU1NJT05fSUQiLCJhY3Rpb25EYXRhIjp7InRhcmdldENvbnN0IjoidHQwMjQxNTI3IiwicmF0aW5nVmFsdWUiOm51bGx9LCJhY3Rpb24iOiJhZGRUb1dhdGNobGlzdCIsInRpbWVzdGFtcCI6MTYzMjUxOTAyMjk0MiwicmV0dXJuVVJMIjoiL3RpdGxlL3R0MDI0MTUyNy8ifQ%3D%3D%26ref_%3Dnoref';"
+              >
+                <img class="inline-block ml-2" src="assets/cross.svg" alt="" />
+                <span>Add to Watchlist</span>
+              </button>
+              <button class="btn-gray-ligth rounded-r-md px-4 py-2 ml-1">
+                <i class="fas fa-angle-down"></i>
+              </button>
+            </div>
+            <div
+              class="row-span-1 text-blue-imdb flex justify-end items-center"
+            >
+              <a href="" class="text-base hover:underline mr-1">1.8K</a>
+              <a href="" class="text-xs hover:underline mr-2">User reviews</a>
+              <a href="" class="text-base hover:underline mr-1">272</a>
+              <a href="" class="text-xs hover:underline mr-2">Critic reviews</a>
+              <a href="" class="text-xs flex"
+                ><button
+                  class="text-white mr-1 bg-green-600 py-0.5 px-0.5 font-bold"
+                >
+                  64
+                </button>
+                <p>Metascore</p></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divide-y divide-gray-700 block md:hidden">
+      <div></div>
+      <div class="text-blue-imdb text-sm px-16">
+        <a
+          href="https://pro.imdb.com/title/tt0241527/?rf=cons_tt_atf&ref_=cons_tt_atf"
+          target="_blank"
+        >
+          <p class="py-3">See more at IMDBPro</p>
+        </a>
+      </div>
+    </div>
   </body>
 </html>

@@ -40,3 +40,9 @@
 /* .img-poster {
   height: 19.688rem;
 } */
+.bg-size {
+  background-size: 19px 19px;
+}
+::placeholder {
+  padding: 10px;
+}
