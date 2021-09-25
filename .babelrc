@@ -1,0 +1,14 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "12.14.1", // debes colocar acá la versión de node que tengas
+                     "esmodules": true
+                }
+            }
+        ]
+    ],
+    "plugins": ["@babel/plugin-proposal-object-rest-spread"]
+}
