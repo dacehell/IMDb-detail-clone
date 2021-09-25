@@ -8,6 +8,6 @@
 - Tailwind
 - Webpack
 
-## Link Deploy
+## Link github
 
-https://dacehell.github.io/IMDb-detail-clone
+https://github.com/dacehell/IMDb-detail-clone
