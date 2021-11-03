@@ -8,6 +8,7 @@ module.exports = {
       "blue-imdb": "#388CEF",
       "red-imdb": "#FB4B4B",
       "gray-light-imdb": "#313131",
+      "yellow-imdb": "#F5C518",
     }),
     fontFamily: {
       search: ['"Font Awesome 5 Free"'],
